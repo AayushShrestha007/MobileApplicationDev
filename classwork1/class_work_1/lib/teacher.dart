@@ -1,3 +1,4 @@
+//creating teacher class
 class Teacher {
   final String? teacherId;
   final String? teacherFname;
@@ -5,6 +6,7 @@ class Teacher {
   Teacher({this.teacherId, this.teacherFname, this.country});
 }
 
+//creating student class
 class Student {
   final String? studentId;
   final String? studentFname;
@@ -13,6 +15,7 @@ class Student {
   Student({this.studentId, this.studentFname, this.listTeacher});
 }
 
+//creating country class
 class Country {
   final String? cid;
   final String? cName;
@@ -37,14 +40,16 @@ void main(List<String> args) {
   Student s2 = Student(
       studentId: "2", studentFname: "Pramesh", listTeacher: teacherList);
   Student s3 =
-      Student(studentId: "2", studentFname: "Kehar", listTeacher: teacherList);
+      Student(studentId: "3", studentFname: "Kehar", listTeacher: teacherList);
 
-  print(
-      "The student id is ${s1.studentId},student fname is ${s1.studentFname} and the teachers are ${s1.listTeacher?[0].teacherFname}, ${s1.listTeacher?[1].teacherFname}, ${s1.listTeacher?[2].teacherFname}");
+  List<Student> studentList = [];
+  studentList.add(s1);
+  studentList.add(s2);
+  studentList.add(s3);
 
-  print(
-      "The student id is ${s1.studentId},student fname is ${s2.studentFname}  and the teachers are ${s1.listTeacher?[0].teacherFname}, ${s1.listTeacher?[1].teacherFname}, ${s1.listTeacher?[2].teacherFname}");
-
-  print(
-      "The student id is ${s1.studentId},student fname is ${s3.studentFname} and the teachers are ${s1.listTeacher?[0].teacherFname}, ${s1.listTeacher?[1].teacherFname}, ${s1.listTeacher?[2].teacherFname}");
+  //printing the student details
+  for (int i = 0; i < studentList.length; i++) {
+    print(
+        "The student id is ${studentList[i].studentId},student fname is ${studentList[i].studentFname} and the teachers are ${studentList[i].listTeacher?[0].teacherFname}, ${studentList[i].listTeacher?[1].teacherFname}, ${studentList[i].listTeacher?[2].teacherFname}");
+  }
 }
