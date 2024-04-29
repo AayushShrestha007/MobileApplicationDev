@@ -10,19 +10,25 @@ class StarScreen extends StatelessWidget {
         title: const Text("Stars"),
       ),
       body: Container(
-        height: 700,
+        height: 800,
         color: Colors.yellow,
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Icon(Icons.star),
-            Column(
-              children: [
-                Icon(Icons.star),
-                Icon(Icons.star),
-              ],
-            )
+            Spacer(),
+            Icon(Icons.star),
+            Icon(Icons.star),
           ],
+          // children: [
+          //   Icon(Icons.star),
+          //   Column(
+          //     children: [
+          //       Icon(Icons.star),
+          //       Icon(Icons.star),
+          //     ],
+          //   )
+          // ],
         ),
       ),
     );

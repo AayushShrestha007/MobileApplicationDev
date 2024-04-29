@@ -17,6 +17,8 @@ class _HelloWorldScreenState extends State<HelloWorldScreen> {
 
   ArithmeticModel? arithmeticModel;
 
+  String? group;
+
   final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -67,6 +69,54 @@ class _HelloWorldScreenState extends State<HelloWorldScreen> {
                   return null;
                 },
               ),
+              ListTile(
+                title: const Text("add"),
+                leading: Radio(
+                  value: 'add',
+                  groupValue: group,
+                  onChanged: (String? value) {
+                    setState(() {
+                      group = value;
+                    });
+                  },
+                ),
+              ),
+              ListTile(
+                title: const Text("subtract"),
+                leading: Radio(
+                  value: 'subtract',
+                  groupValue: group,
+                  onChanged: (String? value) {
+                    setState(() {
+                      group = value;
+                    });
+                  },
+                ),
+              ),
+              ListTile(
+                title: const Text("multiply"),
+                leading: Radio(
+                  value: 'multiply',
+                  groupValue: group,
+                  onChanged: (String? value) {
+                    setState(() {
+                      group = value;
+                    });
+                  },
+                ),
+              ),
+              ListTile(
+                title: const Text("divide"),
+                leading: Radio(
+                  value: 'divide',
+                  groupValue: group,
+                  onChanged: (String? value) {
+                    setState(() {
+                      group = value;
+                    });
+                  },
+                ),
+              ),
               ElevatedButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
@@ -76,7 +126,7 @@ class _HelloWorldScreenState extends State<HelloWorldScreen> {
                         first: first!,
                         second: second!,
                       );
-                      result = arithmeticModel!.add();
+                      result = arithmeticModel!.calculate(group!);
                     });
                   }
                 },

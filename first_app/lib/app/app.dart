@@ -1,4 +1,4 @@
-import 'package:first_app/screen/star_screen.dart';
+import 'package:first_app/screen/list_tile_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -6,6 +6,6 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: StarScreen());
+    return const MaterialApp(home: ListTileScreen());
   }
 }
