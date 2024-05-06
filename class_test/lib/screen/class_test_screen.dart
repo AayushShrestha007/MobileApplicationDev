@@ -2,11 +2,12 @@ import 'package:class_test/common/button_widget.dart';
 import 'package:flutter/material.dart';
 
 class ClassTestScreen extends StatelessWidget {
-  const ClassTestScreen({super.key});
+  var name;
+
+  ClassTestScreen({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
-    String name = "Ayush";
     List<String> characters = [];
 
     // Extract individual characters from the inputString and insert them into the characters list

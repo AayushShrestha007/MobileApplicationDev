@@ -11,6 +11,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  String? name = "Ayush";
+
   @override
   void initState() {
     super.initState();
@@ -20,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const ClassTestScreen(),
+          builder: (context) => ClassTestScreen(name: name),
         ),
       ),
     );
@@ -28,8 +30,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text("Welcome Ayush")),
+    return Scaffold(
+      body: Center(child: Text("Welcome $name")),
     );
   }
 }
