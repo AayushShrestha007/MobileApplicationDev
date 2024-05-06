@@ -22,18 +22,16 @@ class SocialMediaScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: Expanded(
-          child: ListView.separated(
-              itemBuilder: (context, index) {
-                return ListTileWidget(
-                  index: 1,
-                  assetURL: 'assets/images/image_2.png',
-                  assetURL2: 'assets/images/image_1.jpeg',
-                );
-              },
-              separatorBuilder: (context, index) => const Divider(),
-              itemCount: 6),
-        )
+        body: ListView.separated(
+            itemBuilder: (context, index) {
+              return ListTileWidget(
+                index: 1,
+                assetURL: 'assets/images/image_2.png',
+                assetURL2: 'assets/images/image_1.jpeg',
+              );
+            },
+            separatorBuilder: (context, index) => const Divider(),
+            itemCount: 30)
         // body: SingleChildScrollView(
         //   child: Column(
         //     children: [

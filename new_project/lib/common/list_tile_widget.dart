@@ -24,7 +24,7 @@ class ListTileWidget extends StatelessWidget {
           ),
           Positioned(
             bottom: 0,
-            right: 0,
+            right: 3,
             child: SizedBox(
               height: 30,
               width: 30,
